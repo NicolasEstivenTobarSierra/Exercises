@@ -1,8 +1,8 @@
-# Solicitar al usuario que ingrese un número
-numero = int(input("Ingresa un número: "))
+# Solicitar al usuario que ingrese la calificación
+calification = float(input("Ingresa tu calificación: "))
 
-# Verificar si el número es par o impar utilizando el operador módulo (%)
-if numero % 2 == 0:
-    print(f"El número {numero} es par.")
+# Verificar si la calificación es aprobatoria o reprobatoria
+if calification >= 60:
+    print("Aprobado")
 else:
-    print(f"El número {numero} es impar.")
+    print("Reprobado")
