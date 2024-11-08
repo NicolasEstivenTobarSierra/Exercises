@@ -1,23 +1,14 @@
-# Solicitar al usuario los dos números y la operación
-firstNumber = float(input("Enter the first number: "))
-secondNumber = float(input("Enter the second number: "))
-operation = input("Enter the operation (+, -, *, /): ")
+# Solicitar al usuario las longitudes de los tres lados del triángulo
+lado1 = float(input("Ingresa la longitud del primer lado: "))
+lado2 = float(input("Ingresa la longitud del segundo lado: "))
+lado3 = float(input("Ingresa la longitud del tercer lado: "))
 
-# Verificar la operación y realizar el cálculo
-if operation == "+":
-    result = firstNumber + secondNumber
-    print(f"The result of {firstNumber} + {secondNumber} is {result}")
-elif operation == "-":
-    result = firstNumber - secondNumber
-    print(f"The result of {firstNumber} - {secondNumber} is {result}")
-elif operation == "*":
-    result = firstNumber * secondNumber
-    print(f"The result of {firstNumber} * {secondNumber} is {result}")
-elif operation == "/":
-    if secondNumber != 0:
-        result = firstNumber / secondNumber
-        print(f"The result of {firstNumber} / {secondNumber} is {result}")
-    else:
-        print("Error: Cannot divide by zero.")
+# Verificar el tipo de triángulo
+if lado1 <= 0 or lado2 <= 0 or lado3 <= 0:
+    print("Las longitudes de los lados deben ser positivas.")
+elif lado1 == lado2 == lado3:
+    print("El triángulo es equilátero.")
+elif lado1 == lado2 or lado2 == lado3 or lado1 == lado3:
+    print("El triángulo es isósceles.")
 else:
-    print("Invalid operation. Use +, -, *, or /.")
+    print("El triángulo es escaleno.")
